@@ -1,2 +1,9 @@
-[local]
-localhost
+[prometheus]
+188.68.220.100
+
+[grafana]
+84.38.181.203
+
+[service_instances]
+ec2-34-248-8-7.eu-west-1.compute.amazonaws.com
+ec2-34-243-127-27.eu-west-1.compute.amazonaws.com

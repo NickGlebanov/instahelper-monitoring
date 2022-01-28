@@ -1,5 +1,5 @@
 ---
-- name: Add SSH key to vscale hosting and create scalets
+- name: Create scalets
   connection: local
   gather_facts: True
   hosts: local
