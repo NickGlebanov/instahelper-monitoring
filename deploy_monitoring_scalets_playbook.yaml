@@ -1,0 +1,34 @@
+---
+- name: Add SSH key to vscale hosting and create scalets
+  connection: local
+  gather_facts: True
+  hosts: local
+  tasks:
+    - name: Create scalet for Prometheus
+      vscale_scalets:
+        token: "{{ token }}"
+        name: "Prometheus"
+        plan: medium
+        location: spb0
+        image: ubuntu_20.04_64_001_master
+        key_name: "id_rsa"
+        collect_facts: "yes"
+        power_state: "started"
+        upgrade: "yes"
+        state: present
+      register: server
+
+
+    - name: Create scalet for Grafana
+      vscale_scalets:
+        token: "{{ token }}"
+        name: "Grafana"
+        plan: medium
+        location: spb0
+        image: ubuntu_20.04_64_001_master
+        key_name: "id_rsa"
+        collect_facts: "yes"
+        power_state: "started"
+        upgrade: "yes"
+        state: present
+      register: server
