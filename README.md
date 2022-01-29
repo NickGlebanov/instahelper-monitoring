@@ -12,3 +12,4 @@
  ansible-galaxy install cloudalchemy.node_exporter
 ```
 
+TODO написать свои роли для мониторинга
